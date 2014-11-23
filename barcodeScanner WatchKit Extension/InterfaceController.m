@@ -10,6 +10,7 @@
 
 
 @interface InterfaceController()
+@property (strong, nonatomic) IBOutlet WKInterfaceTable *membershipTable;
 
 @end
 
