@@ -1,5 +1,5 @@
 //
-//  ScannerViewController.h
+//  AddCardViewController.h
 //  barcodeScanner
 //
 //  Created by Lynne Okada on 11/23/14.
@@ -7,13 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <AVFoundation/AVFoundation.h>
 
 @class Card;
 
-@interface ScannerViewController : UIViewController <AVCaptureMetadataOutputObjectsDelegate>
+@interface AddCardViewController : UIViewController
 
 @property (nonatomic, strong) Card *cardBeingAdded;
 
 @end
-

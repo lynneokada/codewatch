@@ -31,7 +31,7 @@
                     <navigationItem key="navigationItem" id="MvB-e8-P7X">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="UBR-tO-ES5">
                             <connections>
-                                <segue destination="vXZ-lx-hvc" kind="show" identifier="addCard" id="5Zm-qO-hPj"/>
+                                <segue destination="Qxr-tM-xMg" kind="show" identifier="addCard" id="Gt8-BD-7Dq"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -51,12 +51,82 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DTt-pQ-Gow">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <items>
+                                    <navigationItem id="Moe-9p-mim">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="bQD-vh-91n">
+                                            <connections>
+                                                <segue destination="L6O-lx-7CR" kind="unwind" identifier="done" unwindAction="unwindToAddCardViewController:" id="jbf-eD-C4J"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Q5L-cX-Ynd">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="done" id="Lwd-jd-GDG">
+                            <connections>
+                                <action selector="doneTapped:" destination="vXZ-lx-hvc" id="fRL-RE-ffK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="doneButton" destination="Lwd-jd-GDG" id="tza-3o-Hb1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <exit id="L6O-lx-7CR" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1558" y="-292"/>
+            <point key="canvasLocation" x="2234" y="-126"/>
+        </scene>
+        <!--Add Card View Controller-->
+        <scene sceneID="De8-AS-g4O">
+            <objects>
+                <viewController id="Qxr-tM-xMg" customClass="AddCardViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xXW-YR-MP3"/>
+                        <viewControllerLayoutGuide type="bottom" id="9cx-xl-rii"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iJD-td-RLQ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PZL-zj-Ilb">
+                                <rect key="frame" x="140" y="125" width="320" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dad-Gt-mlO">
+                                <rect key="frame" x="0.0" y="554" width="600" height="46"/>
+                                <color key="backgroundColor" white="0.92190069901315785" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="SAVE">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveTapped:" destination="Qxr-tM-xMg" eventType="touchUpInside" id="gNS-3h-FQf"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Place:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Olq-X8-iXi">
+                                <rect key="frame" x="43" y="129" width="48" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="saveButton" destination="dad-Gt-mlO" id="qTi-u4-nnq"/>
+                        <outlet property="textField" destination="PZL-zj-Ilb" id="Qmi-yI-O8M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g3c-MX-Pat" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1512" y="-126"/>
         </scene>
         <!--Show Card View Controller-->
         <scene sceneID="OXq-C8-vvt">
@@ -74,7 +144,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DNF-T1-Unk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1564" y="518"/>
+            <point key="canvasLocation" x="1512" y="666"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="l35-JN-KgX">

@@ -7,8 +7,10 @@
 //
 
 #import "ScannerViewController.h"
+#import "Card.h"
 
 @interface ScannerViewController ()
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
 
 @end
 
@@ -36,7 +38,7 @@
     label = [[UILabel alloc] init];
     label.frame = CGRectMake(0, self.view.bounds.size.height - 40, self.view.bounds.size.width, 40);
     label.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
-    label.backgroundColor = [UIColor colorWithWhite:0.15 alpha:0.65];
+    label.backgroundColor = [UIColor redColor];
     label.textColor = [UIColor whiteColor];
     label.textAlignment = NSTextAlignmentCenter;
     label.text = @"(none)";
@@ -95,14 +97,26 @@
         {
             NSLog(@"detectionString: %@", detectionString);
             label.text = detectionString;
+            label.backgroundColor = [UIColor greenColor];
+            self.doneButton.enabled = YES;
             break;
         }
         else
+            label.backgroundColor = [UIColor redColor];
+            self.doneButton.enabled = NO;
             label.text = @"(none)";
     }
     
     highlightView.frame = highlightViewRect;
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"done"])
+    {
+        NSLog(@"done");
+        self.cardBeingAdded.cardBarCodeID = label.text;
+    }
+}
 
 @end

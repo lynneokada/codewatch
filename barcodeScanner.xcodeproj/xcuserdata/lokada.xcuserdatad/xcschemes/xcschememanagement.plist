@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>barcodeScanner Watch App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>barcodeScanner.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -18,6 +23,11 @@
 			<true/>
 		</dict>
 		<key>D24F4A591A226F8B00B9B56D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D24F4A921A22960500B9B56D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

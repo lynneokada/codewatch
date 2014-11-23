@@ -18,6 +18,16 @@
 		D24F4A6B1A226FD500B9B56D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D24F4A6A1A226FD500B9B56D /* AVFoundation.framework */; };
 		D24F4A6E1A2288D500B9B56D /* ShowCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D24F4A6D1A2288D500B9B56D /* ShowCardViewController.m */; };
 		D24F4A711A22890300B9B56D /* CardTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D24F4A701A22890300B9B56D /* CardTableViewController.m */; };
+		D24F4A741A228D7900B9B56D /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = D24F4A731A228D7900B9B56D /* Card.m */; };
+		D24F4A7A1A2292C800B9B56D /* AddCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D24F4A791A2292C800B9B56D /* AddCardViewController.m */; };
+		D24F4A841A22960500B9B56D /* WatchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D24F4A831A22960500B9B56D /* WatchKit.framework */; };
+		D24F4A8B1A22960500B9B56D /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = D24F4A8A1A22960500B9B56D /* InterfaceController.m */; };
+		D24F4A8E1A22960500B9B56D /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D24F4A8D1A22960500B9B56D /* NotificationController.m */; };
+		D24F4A901A22960500B9B56D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D24F4A8F1A22960500B9B56D /* Images.xcassets */; };
+		D24F4A941A22960500B9B56D /* barcodeScanner Watch App.app in Resources */ = {isa = PBXBuildFile; fileRef = D24F4A931A22960500B9B56D /* barcodeScanner Watch App.app */; };
+		D24F4A9B1A22960500B9B56D /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D24F4A9A1A22960500B9B56D /* Interface.storyboard */; };
+		D24F4A9D1A22960500B9B56D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D24F4A9C1A22960500B9B56D /* Images.xcassets */; };
+		D24F4AA01A22960500B9B56D /* barcodeScanner WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D24F4A811A22960500B9B56D /* barcodeScanner WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +38,35 @@
 			remoteGlobalIDString = D24F4A3D1A226F8B00B9B56D;
 			remoteInfo = barcodeScanner;
 		};
+		D24F4A951A22960500B9B56D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D24F4A361A226F8B00B9B56D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D24F4A921A22960500B9B56D;
+			remoteInfo = "barcodeScanner Watch App";
+		};
+		D24F4A9E1A22960500B9B56D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D24F4A361A226F8B00B9B56D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D24F4A801A22960500B9B56D;
+			remoteInfo = "barcodeScanner WatchKit Extension";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D24F4AA71A22960500B9B56D /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D24F4AA01A22960500B9B56D /* barcodeScanner WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		D24F4A3E1A226F8B00B9B56D /* barcodeScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = barcodeScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,6 +88,23 @@
 		D24F4A6D1A2288D500B9B56D /* ShowCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowCardViewController.m; sourceTree = "<group>"; };
 		D24F4A6F1A22890300B9B56D /* CardTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardTableViewController.h; sourceTree = "<group>"; };
 		D24F4A701A22890300B9B56D /* CardTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardTableViewController.m; sourceTree = "<group>"; };
+		D24F4A721A228D7900B9B56D /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
+		D24F4A731A228D7900B9B56D /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
+		D24F4A781A2292C800B9B56D /* AddCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCardViewController.h; sourceTree = "<group>"; };
+		D24F4A791A2292C800B9B56D /* AddCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCardViewController.m; sourceTree = "<group>"; };
+		D24F4A811A22960500B9B56D /* barcodeScanner WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "barcodeScanner WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D24F4A831A22960500B9B56D /* WatchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchKit.framework; path = System/Library/Frameworks/WatchKit.framework; sourceTree = SDKROOT; };
+		D24F4A871A22960500B9B56D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D24F4A881A22960500B9B56D /* PushNotificationPayload.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PushNotificationPayload.json; sourceTree = "<group>"; };
+		D24F4A891A22960500B9B56D /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		D24F4A8A1A22960500B9B56D /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		D24F4A8C1A22960500B9B56D /* NotificationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationController.h; sourceTree = "<group>"; };
+		D24F4A8D1A22960500B9B56D /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
+		D24F4A8F1A22960500B9B56D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D24F4A931A22960500B9B56D /* barcodeScanner Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "barcodeScanner Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D24F4A991A22960500B9B56D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D24F4A9A1A22960500B9B56D /* Interface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Interface.storyboard; sourceTree = "<group>"; };
+		D24F4A9C1A22960500B9B56D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +123,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D24F4A7E1A22960500B9B56D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D24F4A841A22960500B9B56D /* WatchKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -76,6 +139,9 @@
 			children = (
 				D24F4A401A226F8B00B9B56D /* barcodeScanner */,
 				D24F4A5D1A226F8B00B9B56D /* barcodeScannerTests */,
+				D24F4A851A22960500B9B56D /* barcodeScanner WatchKit Extension */,
+				D24F4A971A22960500B9B56D /* barcodeScanner Watch App */,
+				D24F4A821A22960500B9B56D /* Frameworks */,
 				D24F4A3F1A226F8B00B9B56D /* Products */,
 				D24F4A6A1A226FD500B9B56D /* AVFoundation.framework */,
 			);
@@ -86,6 +152,8 @@
 			children = (
 				D24F4A3E1A226F8B00B9B56D /* barcodeScanner.app */,
 				D24F4A5A1A226F8B00B9B56D /* barcodeScannerTests.xctest */,
+				D24F4A811A22960500B9B56D /* barcodeScanner WatchKit Extension.appex */,
+				D24F4A931A22960500B9B56D /* barcodeScanner Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -97,6 +165,8 @@
 				D24F4A461A226F8B00B9B56D /* AppDelegate.m */,
 				D24F4A6F1A22890300B9B56D /* CardTableViewController.h */,
 				D24F4A701A22890300B9B56D /* CardTableViewController.m */,
+				D24F4A781A2292C800B9B56D /* AddCardViewController.h */,
+				D24F4A791A2292C800B9B56D /* AddCardViewController.m */,
 				D24F4A4B1A226F8B00B9B56D /* ScannerViewController.h */,
 				D24F4A4C1A226F8B00B9B56D /* ScannerViewController.m */,
 				D24F4A6C1A2288D500B9B56D /* ShowCardViewController.h */,
@@ -105,6 +175,8 @@
 				D24F4A511A226F8B00B9B56D /* Images.xcassets */,
 				D24F4A531A226F8B00B9B56D /* LaunchScreen.xib */,
 				D24F4A481A226F8B00B9B56D /* barcodeScanner.xcdatamodeld */,
+				D24F4A721A228D7900B9B56D /* Card.h */,
+				D24F4A731A228D7900B9B56D /* Card.m */,
 				D24F4A411A226F8B00B9B56D /* Supporting Files */,
 			);
 			path = barcodeScanner;
@@ -136,6 +208,54 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		D24F4A821A22960500B9B56D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D24F4A831A22960500B9B56D /* WatchKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D24F4A851A22960500B9B56D /* barcodeScanner WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D24F4A891A22960500B9B56D /* InterfaceController.h */,
+				D24F4A8A1A22960500B9B56D /* InterfaceController.m */,
+				D24F4A8C1A22960500B9B56D /* NotificationController.h */,
+				D24F4A8D1A22960500B9B56D /* NotificationController.m */,
+				D24F4A8F1A22960500B9B56D /* Images.xcassets */,
+				D24F4A861A22960500B9B56D /* Supporting Files */,
+			);
+			path = "barcodeScanner WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		D24F4A861A22960500B9B56D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D24F4A871A22960500B9B56D /* Info.plist */,
+				D24F4A881A22960500B9B56D /* PushNotificationPayload.json */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D24F4A971A22960500B9B56D /* barcodeScanner Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				D24F4A9A1A22960500B9B56D /* Interface.storyboard */,
+				D24F4A9C1A22960500B9B56D /* Images.xcassets */,
+				D24F4A981A22960500B9B56D /* Supporting Files */,
+			);
+			path = "barcodeScanner Watch App";
+			sourceTree = "<group>";
+		};
+		D24F4A981A22960500B9B56D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D24F4A991A22960500B9B56D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,10 +266,12 @@
 				D24F4A3A1A226F8B00B9B56D /* Sources */,
 				D24F4A3B1A226F8B00B9B56D /* Frameworks */,
 				D24F4A3C1A226F8B00B9B56D /* Resources */,
+				D24F4AA71A22960500B9B56D /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D24F4A9F1A22960500B9B56D /* PBXTargetDependency */,
 			);
 			name = barcodeScanner;
 			productName = barcodeScanner;
@@ -174,6 +296,39 @@
 			productReference = D24F4A5A1A226F8B00B9B56D /* barcodeScannerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		D24F4A801A22960500B9B56D /* barcodeScanner WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D24F4AA41A22960500B9B56D /* Build configuration list for PBXNativeTarget "barcodeScanner WatchKit Extension" */;
+			buildPhases = (
+				D24F4A7D1A22960500B9B56D /* Sources */,
+				D24F4A7E1A22960500B9B56D /* Frameworks */,
+				D24F4A7F1A22960500B9B56D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D24F4A961A22960500B9B56D /* PBXTargetDependency */,
+			);
+			name = "barcodeScanner WatchKit Extension";
+			productName = "barcodeScanner WatchKit Extension";
+			productReference = D24F4A811A22960500B9B56D /* barcodeScanner WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		D24F4A921A22960500B9B56D /* barcodeScanner Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D24F4AA11A22960500B9B56D /* Build configuration list for PBXNativeTarget "barcodeScanner Watch App" */;
+			buildPhases = (
+				D24F4A911A22960500B9B56D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "barcodeScanner Watch App";
+			productName = "barcodeScanner Watch App";
+			productReference = D24F4A931A22960500B9B56D /* barcodeScanner Watch App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -189,6 +344,12 @@
 					D24F4A591A226F8B00B9B56D = {
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = D24F4A3D1A226F8B00B9B56D;
+					};
+					D24F4A801A22960500B9B56D = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					D24F4A921A22960500B9B56D = {
+						CreatedOnToolsVersion = 6.2;
 					};
 				};
 			};
@@ -207,6 +368,8 @@
 			targets = (
 				D24F4A3D1A226F8B00B9B56D /* barcodeScanner */,
 				D24F4A591A226F8B00B9B56D /* barcodeScannerTests */,
+				D24F4A801A22960500B9B56D /* barcodeScanner WatchKit Extension */,
+				D24F4A921A22960500B9B56D /* barcodeScanner Watch App */,
 			);
 		};
 /* End PBXProject section */
@@ -229,6 +392,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D24F4A7F1A22960500B9B56D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D24F4A901A22960500B9B56D /* Images.xcassets in Resources */,
+				D24F4A941A22960500B9B56D /* barcodeScanner Watch App.app in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D24F4A911A22960500B9B56D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D24F4A9B1A22960500B9B56D /* Interface.storyboard in Resources */,
+				D24F4A9D1A22960500B9B56D /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -240,7 +421,9 @@
 				D24F4A711A22890300B9B56D /* CardTableViewController.m in Sources */,
 				D24F4A471A226F8B00B9B56D /* AppDelegate.m in Sources */,
 				D24F4A4A1A226F8B00B9B56D /* barcodeScanner.xcdatamodeld in Sources */,
+				D24F4A7A1A2292C800B9B56D /* AddCardViewController.m in Sources */,
 				D24F4A4D1A226F8B00B9B56D /* ScannerViewController.m in Sources */,
+				D24F4A741A228D7900B9B56D /* Card.m in Sources */,
 				D24F4A441A226F8B00B9B56D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -253,6 +436,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D24F4A7D1A22960500B9B56D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D24F4A8E1A22960500B9B56D /* NotificationController.m in Sources */,
+				D24F4A8B1A22960500B9B56D /* InterfaceController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -260,6 +452,16 @@
 			isa = PBXTargetDependency;
 			target = D24F4A3D1A226F8B00B9B56D /* barcodeScanner */;
 			targetProxy = D24F4A5B1A226F8B00B9B56D /* PBXContainerItemProxy */;
+		};
+		D24F4A961A22960500B9B56D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D24F4A921A22960500B9B56D /* barcodeScanner Watch App */;
+			targetProxy = D24F4A951A22960500B9B56D /* PBXContainerItemProxy */;
+		};
+		D24F4A9F1A22960500B9B56D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D24F4A801A22960500B9B56D /* barcodeScanner WatchKit Extension */;
+			targetProxy = D24F4A9E1A22960500B9B56D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -413,6 +615,66 @@
 			};
 			name = Release;
 		};
+		D24F4AA21A22960500B9B56D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = barcodeScanner_WatchKit_Extension;
+				INFOPLIST_FILE = "barcodeScanner Watch App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		D24F4AA31A22960500B9B56D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				IBSC_MODULE = barcodeScanner_WatchKit_Extension;
+				INFOPLIST_FILE = "barcodeScanner Watch App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
+		D24F4AA51A22960500B9B56D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "barcodeScanner WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		D24F4AA61A22960500B9B56D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "barcodeScanner WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -442,6 +704,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		D24F4AA11A22960500B9B56D /* Build configuration list for PBXNativeTarget "barcodeScanner Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D24F4AA21A22960500B9B56D /* Debug */,
+				D24F4AA31A22960500B9B56D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D24F4AA41A22960500B9B56D /* Build configuration list for PBXNativeTarget "barcodeScanner WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D24F4AA51A22960500B9B56D /* Debug */,
+				D24F4AA61A22960500B9B56D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 
