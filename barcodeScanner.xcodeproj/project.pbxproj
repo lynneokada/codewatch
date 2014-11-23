@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17AA17911A22A7D400478EEC /* MembershipTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 17AA17901A22A7D400478EEC /* MembershipTableCell.m */; };
 		D24F4A441A226F8B00B9B56D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D24F4A431A226F8B00B9B56D /* main.m */; };
 		D24F4A471A226F8B00B9B56D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D24F4A461A226F8B00B9B56D /* AppDelegate.m */; };
 		D24F4A4A1A226F8B00B9B56D /* barcodeScanner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D24F4A481A226F8B00B9B56D /* barcodeScanner.xcdatamodeld */; };
@@ -69,6 +70,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		17AA178F1A22A7D400478EEC /* MembershipTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MembershipTableCell.h; sourceTree = "<group>"; };
+		17AA17901A22A7D400478EEC /* MembershipTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MembershipTableCell.m; sourceTree = "<group>"; };
 		D24F4A3E1A226F8B00B9B56D /* barcodeScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = barcodeScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D24F4A421A226F8B00B9B56D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D24F4A431A226F8B00B9B56D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -219,6 +222,8 @@
 		D24F4A851A22960500B9B56D /* barcodeScanner WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				17AA178F1A22A7D400478EEC /* MembershipTableCell.h */,
+				17AA17901A22A7D400478EEC /* MembershipTableCell.m */,
 				D24F4A891A22960500B9B56D /* InterfaceController.h */,
 				D24F4A8A1A22960500B9B56D /* InterfaceController.m */,
 				D24F4A8C1A22960500B9B56D /* NotificationController.h */,
@@ -442,6 +447,7 @@
 			files = (
 				D24F4A8E1A22960500B9B56D /* NotificationController.m in Sources */,
 				D24F4A8B1A22960500B9B56D /* InterfaceController.m in Sources */,
+				17AA17911A22A7D400478EEC /* MembershipTableCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -712,6 +718,7 @@
 				D24F4AA31A22960500B9B56D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D24F4AA41A22960500B9B56D /* Build configuration list for PBXNativeTarget "barcodeScanner WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -720,6 +727,7 @@
 				D24F4AA61A22960500B9B56D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

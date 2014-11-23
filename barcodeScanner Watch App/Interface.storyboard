@@ -18,6 +18,9 @@
                                             <label width="1" height="40" alignment="left" text="Store Name" textAlignment="center" id="dqF-Dj-gBn"/>
                                         </items>
                                     </group>
+                                    <connections>
+                                        <outlet property="storeName" destination="dqF-Dj-gBn" id="BDg-LW-QVz"/>
+                                    </connections>
                                 </tableRow>
                             </items>
                         </table>
