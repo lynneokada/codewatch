@@ -7,11 +7,12 @@
 //
 
 #import "InterfaceController.h"
+#import "MembershipTableCell.h"
 
 
 @interface InterfaceController()
 @property (strong, nonatomic) IBOutlet WKInterfaceTable *membershipTable;
-
+@property (strong, nonatomic) NSArray *memberships;
 @end
 
 
@@ -24,8 +25,21 @@
         // Configure interface objects here.
         NSLog(@"%@ initWithContext", self);
         
+        // set self.memberships to contain the data from the phone
     }
     return self;
+}
+
+-(void)loadTableData {
+    // remove this once we get real data
+    self.memberships = @[@"Safeway", @"Costco", @"Planet Granite", @"CVS", @"Walgreens", @"HomeDepot"];
+    
+    [self.membershipTable setNumberOfRows:self.memberships.count withRowType:@"defaultRow"];
+    
+    for (NSInteger i = 0; i < self.memberships.count; i++) {
+        MembershipTableCell *cell = [self.membershipTable rowControllerAtIndex:i];
+        [cell.storeName setText:self.memberships[i]];
+    }
 }
 
 - (void)willActivate {
