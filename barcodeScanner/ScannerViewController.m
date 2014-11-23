@@ -1,18 +1,18 @@
 //
-//  ViewController.m
+//  ScannerViewController.m
 //  barcodeScanner
 //
 //  Created by Lynne Okada on 11/23/14.
 //  Copyright (c) 2014 Lynne Okada. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "ScannerViewController.h"
 
-@interface ViewController ()
+@interface ScannerViewController ()
 
 @end
 
-@implementation ViewController
+@implementation ScannerViewController
 {
     AVCaptureSession *captureSession;
     AVCaptureDevice *captureDevice;
@@ -73,27 +73,27 @@
 
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection
 {
-    CGRect highlightRect = CGRectZero;
+    CGRect highlightViewRect = CGRectZero;
     AVMetadataMachineReadableCodeObject *barCodeObject;
     NSString *detectionString = nil;
-    NSArray *barcodeTypes = @[AVMetadataObjectTypeUPCECode, AVMetadataObjectTypeCode39Code, AVMetadataObjectTypeCode39Mod43Code,
+    NSArray *barCodeTypes = @[AVMetadataObjectTypeUPCECode, AVMetadataObjectTypeCode39Code, AVMetadataObjectTypeCode39Mod43Code,
                               AVMetadataObjectTypeEAN13Code, AVMetadataObjectTypeEAN8Code, AVMetadataObjectTypeCode93Code, AVMetadataObjectTypeCode128Code,
                               AVMetadataObjectTypePDF417Code, AVMetadataObjectTypeQRCode, AVMetadataObjectTypeAztecCode];
     
-    for (AVMetadataObject *metadata in metadataObjects)
-    {
-        for (NSString *type in barcodeTypes)
-        {
+    for (AVMetadataObject *metadata in metadataObjects) {
+        for (NSString *type in barCodeTypes) {
             if ([metadata.type isEqualToString:type])
             {
                 barCodeObject = (AVMetadataMachineReadableCodeObject *)[previewLayer transformedMetadataObjectForMetadataObject:(AVMetadataMachineReadableCodeObject *)metadata];
-                highlightRect = barCodeObject.bounds;
+                highlightViewRect = barCodeObject.bounds;
                 detectionString = [(AVMetadataMachineReadableCodeObject *)metadata stringValue];
                 break;
             }
         }
+        
         if (detectionString != nil)
         {
+            NSLog(@"detectionString: %@", detectionString);
             label.text = detectionString;
             break;
         }
@@ -101,7 +101,7 @@
             label.text = @"(none)";
     }
     
-    highlightView.frame = highlightRect;
+    highlightView.frame = highlightViewRect;
 }
 
 

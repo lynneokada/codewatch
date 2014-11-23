@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ScannerViewController.h
 //  barcodeScanner
 //
 //  Created by Lynne Okada on 11/23/14.
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 
-@interface ViewController : UIViewController <AVCaptureMetadataOutputObjectsDelegate>
+@interface ScannerViewController : UIViewController <AVCaptureMetadataOutputObjectsDelegate>
 
 
 @end
