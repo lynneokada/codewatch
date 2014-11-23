@@ -8,6 +8,7 @@
 
 #import "ScannerViewController.h"
 #import "Card.h"
+#import "AppDelegate.h"
 
 @interface ScannerViewController ()
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
@@ -116,6 +117,7 @@
     {
         NSLog(@"done");
         self.cardBeingAdded.cardBarCodeID = label.text;
+        [(AppDelegate *)[UIApplication sharedApplication].delegate saveContext];
     }
 }
 
