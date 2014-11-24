@@ -8,6 +8,7 @@
 
 #import "InterfaceController.h"
 #import "MembershipTableCell.h"
+#import "CardDetailInterfaceController.h"
 
 
 @interface InterfaceController()
@@ -26,6 +27,7 @@
         NSLog(@"%@ initWithContext", self);
         
         // set self.memberships to contain the data from the phone
+        [self loadTableData];
     }
     return self;
 }
@@ -50,6 +52,19 @@
 - (void)didDeactivate {
     // This method is called when watch view controller is no longer visible
     NSLog(@"%@ did deactivate", self);
+}
+
+- (id)contextForSegueWithIdentifier:(NSString *)segueIdentifier inTable:(WKInterfaceTable *)table rowIndex:(NSInteger)rowIndex
+{
+    NSMutableArray *context= [[NSMutableArray alloc] init];
+    if ([segueIdentifier isEqualToString:@"viewDetail"])
+    {
+        [context addObject:self.memberships[rowIndex]];
+        [context addObject:@"lou64gtbfhhjk"];
+//        CardDetailInterfaceController *cardDetailViewController = [segueIdentifier];
+//        cardDetailViewController.storeName = self.memberships[rowIndex];
+    }
+    return context;
 }
 
 @end

@@ -33,6 +33,7 @@
 		D24F4A9B1A22960500B9B56D /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D24F4A9A1A22960500B9B56D /* Interface.storyboard */; };
 		D24F4A9D1A22960500B9B56D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D24F4A9C1A22960500B9B56D /* Images.xcassets */; };
 		D24F4AA01A22960500B9B56D /* barcodeScanner WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D24F4A811A22960500B9B56D /* barcodeScanner WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D24F4AAD1A22AF2000B9B56D /* CardDetailInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = D24F4AAC1A22AF2000B9B56D /* CardDetailInterfaceController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +115,8 @@
 		D24F4A991A22960500B9B56D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D24F4A9A1A22960500B9B56D /* Interface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Interface.storyboard; sourceTree = "<group>"; };
 		D24F4A9C1A22960500B9B56D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D24F4AAB1A22AF2000B9B56D /* CardDetailInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardDetailInterfaceController.h; sourceTree = "<group>"; };
+		D24F4AAC1A22AF2000B9B56D /* CardDetailInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardDetailInterfaceController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +237,8 @@
 				D24F4A8A1A22960500B9B56D /* InterfaceController.m */,
 				D24F4A8C1A22960500B9B56D /* NotificationController.h */,
 				D24F4A8D1A22960500B9B56D /* NotificationController.m */,
+				D24F4AAB1A22AF2000B9B56D /* CardDetailInterfaceController.h */,
+				D24F4AAC1A22AF2000B9B56D /* CardDetailInterfaceController.m */,
 				D24F4A8F1A22960500B9B56D /* Images.xcassets */,
 				D24F4A861A22960500B9B56D /* Supporting Files */,
 			);
@@ -457,6 +462,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D24F4AAD1A22AF2000B9B56D /* CardDetailInterfaceController.m in Sources */,
 				D24F4A8E1A22960500B9B56D /* NotificationController.m in Sources */,
 				D24F4A8B1A22960500B9B56D /* InterfaceController.m in Sources */,
 				17AA17911A22A7D400478EEC /* MembershipTableCell.m in Sources */,
