@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		17AA17911A22A7D400478EEC /* MembershipTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 17AA17901A22A7D400478EEC /* MembershipTableCell.m */; };
+		17AA17941A22AC8A00478EEC /* upc-sample.png in Resources */ = {isa = PBXBuildFile; fileRef = 17AA17921A22AC8A00478EEC /* upc-sample.png */; };
+		17AA17951A22AC8A00478EEC /* upc-sample.png in Resources */ = {isa = PBXBuildFile; fileRef = 17AA17921A22AC8A00478EEC /* upc-sample.png */; };
+		17AA17961A22AC8A00478EEC /* qrc-sample.png in Resources */ = {isa = PBXBuildFile; fileRef = 17AA17931A22AC8A00478EEC /* qrc-sample.png */; };
+		17AA17971A22AC8A00478EEC /* qrc-sample.png in Resources */ = {isa = PBXBuildFile; fileRef = 17AA17931A22AC8A00478EEC /* qrc-sample.png */; };
 		D24F4A441A226F8B00B9B56D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D24F4A431A226F8B00B9B56D /* main.m */; };
 		D24F4A471A226F8B00B9B56D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D24F4A461A226F8B00B9B56D /* AppDelegate.m */; };
 		D24F4A4A1A226F8B00B9B56D /* barcodeScanner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D24F4A481A226F8B00B9B56D /* barcodeScanner.xcdatamodeld */; };
@@ -72,6 +76,8 @@
 /* Begin PBXFileReference section */
 		17AA178F1A22A7D400478EEC /* MembershipTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MembershipTableCell.h; sourceTree = "<group>"; };
 		17AA17901A22A7D400478EEC /* MembershipTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MembershipTableCell.m; sourceTree = "<group>"; };
+		17AA17921A22AC8A00478EEC /* upc-sample.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "upc-sample.png"; sourceTree = "<group>"; };
+		17AA17931A22AC8A00478EEC /* qrc-sample.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qrc-sample.png"; sourceTree = "<group>"; };
 		D24F4A3E1A226F8B00B9B56D /* barcodeScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = barcodeScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D24F4A421A226F8B00B9B56D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D24F4A431A226F8B00B9B56D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -256,6 +262,8 @@
 		D24F4A981A22960500B9B56D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				17AA17921A22AC8A00478EEC /* upc-sample.png */,
+				17AA17931A22AC8A00478EEC /* qrc-sample.png */,
 				D24F4A991A22960500B9B56D /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -402,6 +410,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D24F4A901A22960500B9B56D /* Images.xcassets in Resources */,
+				17AA17941A22AC8A00478EEC /* upc-sample.png in Resources */,
+				17AA17961A22AC8A00478EEC /* qrc-sample.png in Resources */,
 				D24F4A941A22960500B9B56D /* barcodeScanner Watch App.app in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,6 +421,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D24F4A9B1A22960500B9B56D /* Interface.storyboard in Resources */,
+				17AA17951A22AC8A00478EEC /* upc-sample.png in Resources */,
+				17AA17971A22AC8A00478EEC /* qrc-sample.png in Resources */,
 				D24F4A9D1A22960500B9B56D /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

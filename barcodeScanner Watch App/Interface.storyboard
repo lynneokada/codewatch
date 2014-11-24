@@ -20,6 +20,7 @@
                                     </group>
                                     <connections>
                                         <outlet property="storeName" destination="dqF-Dj-gBn" id="BDg-LW-QVz"/>
+                                        <segue destination="klh-KE-6OY" kind="push" identifier="viewDetail" id="Cdh-LH-I4g"/>
                                     </connections>
                                 </tableRow>
                             </items>
@@ -31,6 +32,26 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+        <!--Detail-->
+        <scene sceneID="BNf-ma-wJ7">
+            <objects>
+                <controller identifier="Detail" id="klh-KE-6OY">
+                    <items>
+                        <label alignment="left" text="Store Name" id="Nlj-G4-6GN"/>
+                        <label alignment="left" text="ID:" id="ahu-gI-iUx"/>
+                        <separator alignment="left" id="e2s-xD-XPO">
+                            <color key="color" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </separator>
+                        <imageView alignment="left" image="qrc-sample.png" id="cPQ-e3-vBU"/>
+                        <separator alignment="left" id="UsM-nw-Qj4">
+                            <color key="color" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </separator>
+                        <imageView alignment="left" image="upc-sample.png" id="xrm-O0-DGO"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="429" y="345"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
