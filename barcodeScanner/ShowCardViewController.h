@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class Card;
+
 @interface ShowCardViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *name;
+@property (weak, nonatomic) IBOutlet UILabel *ID;
+
+@property (nonatomic, strong) Card *card;
 
 @end

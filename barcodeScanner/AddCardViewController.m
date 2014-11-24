@@ -18,54 +18,34 @@
 
 @end
 
-@implementation AddCardViewController
+@implementation AddCardViewController {
+    NSMutableArray *cards;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
+    self.textField.delegate = self;
 }
 
 - (void) viewDidAppear:(BOOL)animated
 {
-    // get access to the managed object context
-    NSManagedObjectContext *context = ((AppDelegate *)[UIApplication sharedApplication].delegate).managedObjectContext;
-    // get entity description for entity we are selecting
-    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"Card" inManagedObjectContext:context];
-    // create a new fetch request
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    [request setEntity:entityDescription];
-    
-    // create an error variable to pass to the execute method
-    NSError *error;
-    // retrieve results
-    NSMutableArray* fetchedCards = [[context executeFetchRequest:request error:&error] mutableCopy];
-    if (fetchedCards == nil) {
-        //error handling, e.g. display error to user
-    }
-    
-    self.cardID.text = self.cardBeingAdded.cardBarCodeID;
+    self.cardID.text = self.barCodeID;
 }
 
 - (IBAction)saveTapped:(id)sender
 {
     self.cardBeingAdded.cardName = self.textField.text;
+    self.cardBeingAdded.cardBarCodeID = self.cardID.text;
     
     [(AppDelegate *)[UIApplication sharedApplication].delegate saveContext];
 }
 
-- (IBAction)unwindToAddCardViewController:(UIStoryboardSegue *)unwindSegue
-{
+-(BOOL) textFieldShouldReturn:(UITextField *)textField{
     
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([segue.identifier isEqualToString:@"scan"])
-    {
-        ScannerViewController *scannerViewController = [segue destinationViewController];
-        self.cardBeingAdded = scannerViewController.cardBeingAdded;
-    }
+    [self.textField resignFirstResponder];
+    return YES;
 }
 
 

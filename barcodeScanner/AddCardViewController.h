@@ -10,8 +10,9 @@
 
 @class Card;
 
-@interface AddCardViewController : UIViewController
+@interface AddCardViewController : UIViewController <UITextFieldDelegate>
 
 @property (nonatomic, strong) Card *cardBeingAdded;
+@property (nonatomic, strong) NSString *barCodeID;
 
 @end

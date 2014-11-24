@@ -7,6 +7,7 @@
 //
 
 #import "ShowCardViewController.h"
+#import "Card.h"
 
 @interface ShowCardViewController ()
 
@@ -16,7 +17,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.name.text = self.card.cardName;
+    self.ID.text = self.card.cardBarCodeID;
 }
 
 - (void)didReceiveMemoryWarning {

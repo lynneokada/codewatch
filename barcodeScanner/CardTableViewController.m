@@ -10,6 +10,7 @@
 #import "AppDelegate.h"
 #import "Card.h"
 #import "ScannerViewController.h"
+#import "ShowCardViewController.h"
 
 @interface CardTableViewController ()
 
@@ -20,35 +21,54 @@
     NSMutableArray *cardArray;
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
+- (void)viewDidAppear:(BOOL)animated
+{
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    // get access to the managed object context
+    NSManagedObjectContext *context = ((AppDelegate *)[UIApplication sharedApplication].delegate).managedObjectContext;
+    // get entity description for entity we are selecting
+    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"Card" inManagedObjectContext:context];
+    // create a new fetch request
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    [request setEntity:entityDescription];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    // create an error variable to pass to the execute method
+    NSError *error;
+    // retrieve results
+    NSMutableArray* fetchedCards = [[context executeFetchRequest:request error:&error] mutableCopy];
+    if (fetchedCards == nil) {
+        //error handling, e.g. display error to user
+    }
+    
+    cardArray = fetchedCards;
+    NSLog(@"cardArray:%@", cardArray);
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
     return [cardArray count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cardCell" forIndexPath:indexPath];
     
+    cell.textLabel.text = [cardArray[indexPath.row] valueForKey:@"cardName"];
+    
     return cell;
 }
 
-
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //DELETE FROM CORE DATA
+    NSManagedObjectContext *context = ((AppDelegate *)[UIApplication sharedApplication].delegate).managedObjectContext;
+    [context deleteObject:cardArray[indexPath.row]];
+    
+    [cardArray removeObjectAtIndex:indexPath.row];
+    [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -83,9 +103,14 @@
 }
 */
 
+- (IBAction)unwindToCardTableViewController:(UIStoryboardSegue *)unwindSegue
+{
+    
+}
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if([segue.identifier isEqualToString:@"addCard"])
+    if([segue.identifier isEqualToString:@"scan"])
     {
         ScannerViewController *scannerViewController = [segue destinationViewController];
         
@@ -94,6 +119,13 @@
         Card *cardBeingAdded = [NSEntityDescription insertNewObjectForEntityForName:@"Card" inManagedObjectContext:context];
         scannerViewController.cardBeingAdded = cardBeingAdded;
 
+    } else if ([segue.identifier isEqualToString:@"showCard"])
+    {
+        ShowCardViewController *showCardViewController = [segue destinationViewController];
+        NSIndexPath *selectedIndexPath = self.tableView.indexPathForSelectedRow;
+        
+        NSLog(@"CARD: %@", cardArray[selectedIndexPath.row]);
+        showCardViewController.card = cardArray[selectedIndexPath.row];
     }
 }
 

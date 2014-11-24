@@ -32,7 +32,7 @@
                     <navigationItem key="navigationItem" id="MvB-e8-P7X">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="UBR-tO-ES5">
                             <connections>
-                                <segue destination="Qxr-tM-xMg" kind="show" identifier="addCard" id="Gt8-BD-7Dq"/>
+                                <segue destination="vXZ-lx-hvc" kind="show" identifier="scan" id="Tyg-XH-Vhh"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -57,7 +57,7 @@
                     <navigationItem key="navigationItem" id="AQZ-Ni-yVL">
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="UMH-Fm-fLF">
                             <connections>
-                                <segue destination="L6O-lx-7CR" kind="unwind" identifier="done" unwindAction="unwindToAddCardViewController:" id="xfR-TF-b7N"/>
+                                <segue destination="Qxr-tM-xMg" kind="show" identifier="done" id="37T-iC-MN8"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -66,9 +66,8 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
-                <exit id="L6O-lx-7CR" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2234" y="-126"/>
+            <point key="canvasLocation" x="1620" y="-110"/>
         </scene>
         <!--Add Card View Controller-->
         <scene sceneID="De8-AS-g4O">
@@ -90,27 +89,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dad-Gt-mlO">
-                                <rect key="frame" x="0.0" y="554" width="600" height="46"/>
-                                <color key="backgroundColor" white="0.92190069901315785" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="46" id="ZAD-0d-JvV"/>
-                                </constraints>
-                                <state key="normal" title="SAVE">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="saveTapped:" destination="Qxr-tM-xMg" eventType="touchUpInside" id="gNS-3h-FQf"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card ID:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GPV-IC-qDc">
-                                <rect key="frame" x="43" y="217" width="64" height="21"/>
+                                <rect key="frame" x="43" y="217" width="63.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PE9-e1-vN8">
-                                <rect key="frame" x="140" y="217" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="scan" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PE9-e1-vN8">
+                                <rect key="frame" x="139" y="217" width="37" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -121,6 +107,20 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dad-Gt-mlO">
+                                <rect key="frame" x="0.0" y="510" width="600" height="46"/>
+                                <color key="backgroundColor" white="0.92190069901315785" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="ZAD-0d-JvV"/>
+                                </constraints>
+                                <state key="normal" title="SAVE">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveTapped:" destination="Qxr-tM-xMg" eventType="touchUpInside" id="gNS-3h-FQf"/>
+                                    <segue destination="RWS-Ac-Ahp" kind="unwind" unwindAction="unwindToCardTableViewController:" id="qff-dV-2Jv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -138,13 +138,7 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="phG-rD-hiy">
-                        <barButtonItem key="rightBarButtonItem" title="scan" id="asS-SH-WSb">
-                            <connections>
-                                <segue destination="vXZ-lx-hvc" kind="show" identifier="scan" id="Rxe-3c-8Bh"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="phG-rD-hiy"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="cardID" destination="PE9-e1-vN8" id="erh-eB-FlV"/>
@@ -153,8 +147,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g3c-MX-Pat" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="RWS-Ac-Ahp" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1512" y="-126"/>
+            <point key="canvasLocation" x="2366" y="-110"/>
         </scene>
         <!--Show Card View Controller-->
         <scene sceneID="OXq-C8-vvt">
@@ -167,8 +162,32 @@
                     <view key="view" contentMode="scaleToFill" id="BRQ-cf-wZh" customClass="Show">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rm2-8p-PX5">
+                                <rect key="frame" x="279" y="72" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tpT-Zp-sS6">
+                                <rect key="frame" x="279" y="116" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tpT-Zp-sS6" firstAttribute="top" secondItem="Rm2-8p-PX5" secondAttribute="bottom" constant="23" id="Fd5-Gm-DaI"/>
+                            <constraint firstAttribute="centerX" secondItem="Rm2-8p-PX5" secondAttribute="centerX" id="Fq8-uA-WHy"/>
+                            <constraint firstAttribute="centerX" secondItem="tpT-Zp-sS6" secondAttribute="centerX" id="hRa-rf-OG3"/>
+                            <constraint firstItem="Rm2-8p-PX5" firstAttribute="top" secondItem="us3-CX-DMZ" secondAttribute="bottom" constant="8" id="tL9-wy-GBn"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ID" destination="tpT-Zp-sS6" id="nS5-Om-eY9"/>
+                        <outlet property="name" destination="Rm2-8p-PX5" id="qDR-Rn-fWg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DNF-T1-Unk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

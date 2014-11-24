@@ -9,6 +9,7 @@
 #import "ScannerViewController.h"
 #import "Card.h"
 #import "AppDelegate.h"
+#import "AddCardViewController.h"
 
 @interface ScannerViewController ()
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
@@ -115,9 +116,9 @@
 {
     if ([segue.identifier isEqualToString:@"done"])
     {
-        NSLog(@"done");
-        self.cardBeingAdded.cardBarCodeID = label.text;
-        [(AppDelegate *)[UIApplication sharedApplication].delegate saveContext];
+        AddCardViewController *addCardViewController = [segue destinationViewController];
+        addCardViewController.cardBeingAdded = self.cardBeingAdded;
+        addCardViewController.barCodeID = label.text;
     }
 }
 
